@@ -1,9 +1,9 @@
 NAME= Animal
 
-
 SRC= main.cpp\
 	Animal.cpp\
 	WrongAnimal.cpp\
+	Brain.cpp\
 
 OBJ = $(SRC:.cpp=.o)
 
