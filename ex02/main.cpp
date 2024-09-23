@@ -6,19 +6,17 @@
 
 int main()
 {
-    int total = 10;
-    Animal *animals[total];
+    Animal *animals[10];
     int i = 0;
-    while (i < total)
+    while (i < 10)
     {
-        if (total / 2 < i)
+        if (i < 5)
             animals[i] = new Dog();
         else
             animals[i] = new Cat();
         i++;
     }
     i = 0;
-    while (i < total)
+    while (i < 10)
         delete animals[i++];
-    // why did they said that it shouldnt be shallow copy and be deep copy?
 }
