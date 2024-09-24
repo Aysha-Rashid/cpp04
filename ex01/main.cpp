@@ -11,12 +11,9 @@ int main()
     int i = 0;
 
     Dog nothing;
-        Dog something = nothing;
+    Dog something = nothing;
     Dog things(nothing);
 
-    Animal tiger;
-        Animal leopard = tiger;
-    Animal lion(leopard);
     while (i < total)
     {
         if (total / 2 < i)
