@@ -6,17 +6,22 @@
 
 int main()
 {
-    Animal *animals[10];
-    int i = 0;
-    while (i < 10)
-    {
-        if (i < 5)
-            animals[i] = new Dog();
-        else
-            animals[i] = new Cat();
-        i++;
-    }
-    i = 0;
-    while (i < 10)
-        delete animals[i++];
+	Animal *animals[10];
+	int i = 0;
+	
+	Dog nothing;
+		Dog something = nothing;
+	Dog things(nothing);
+
+	while (i < 10)
+	{
+		if (i < 5)
+			animals[i] = new Dog();
+		else
+			animals[i] = new Cat();
+		i++;
+	}
+	i = 0;
+	while (i < 10)
+		delete animals[i++];
 }

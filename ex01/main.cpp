@@ -9,6 +9,14 @@ int main()
     int total = 10;
     Animal *animals[total];
     int i = 0;
+
+    Dog nothing;
+        Dog something = nothing;
+    Dog things(nothing);
+
+    Animal tiger;
+        Animal leopard = tiger;
+    Animal lion(leopard);
     while (i < total)
     {
         if (total / 2 < i)
@@ -20,5 +28,4 @@ int main()
     i = 0;
     while (i < total)
         delete animals[i++];
-    // why did they said that it shouldnt be shallow copy and be deep copy?
 }

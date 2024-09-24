@@ -30,7 +30,7 @@ Dog::Dog(Dog &copy) : Animal()
     if (this != &copy)
     {
         this->type = copy.type;
-        this->DogBrain = copy.DogBrain;
+        this->DogBrain = new Brain (*copy.DogBrain);
     }
 }
 
@@ -40,7 +40,7 @@ Dog &Dog::operator=(const Dog &copy)
     if (this != &copy)
     {
         this->type = copy.type;
-        this->DogBrain = copy.DogBrain;
+        this->DogBrain = new Brain (*copy.DogBrain);
     }
     return (*this);
 }
@@ -57,7 +57,7 @@ Cat::Cat(Cat &copy) : Animal()
     if (this != &copy)
     {
         this->type = copy.type;
-        this->CatBrain = copy.CatBrain;
+        this->CatBrain = new Brain (*copy.CatBrain);
     }
 }
 
@@ -67,7 +67,7 @@ Cat &Cat::operator=(const Cat &copy)
     if (this != &copy)
     {
         this->type = copy.type;
-        this->CatBrain = copy.CatBrain;
+        this->CatBrain = new Brain (*copy.CatBrain);
     }
     return (*this);
 }
