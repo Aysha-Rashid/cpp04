@@ -4,24 +4,21 @@
 #include "Dog.hpp"
 #include "Brain.hpp"
 
-int main()
+int main( void )
 {
-	Animal *animals[10];
-	int i = 0;
-	
-	Dog nothing;
-		Dog something = nothing;
-	Dog things(nothing);
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	// const Animal *some = new Animal();
 
-	while (i < 10)
-	{
-		if (i < 5)
-			animals[i] = new Dog();
-		else
-			animals[i] = new Cat();
-		i++;
+	delete j;
+	delete i;
+
+	Dog basic;
+		Dog tmp = basic;
+	Animal* animals[4] = { new Dog(), new Dog(), new Cat(), new Cat() };
+	for ( int i = 0; i < 4; i++ ) {
+		animals[i]->makeSound();
+		delete animals[i];
 	}
-	i = 0;
-	while (i < 10)
-		delete animals[i++];
+	return 0;
 }

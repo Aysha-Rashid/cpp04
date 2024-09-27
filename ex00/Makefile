@@ -3,6 +3,9 @@ NAME= Animal
 
 SRC= main.cpp\
 	Animal.cpp\
+	Cat.cpp\
+	Dog.cpp\
+	WrongCat.cpp\
 	WrongAnimal.cpp\
 
 OBJ = $(SRC:.cpp=.o)
