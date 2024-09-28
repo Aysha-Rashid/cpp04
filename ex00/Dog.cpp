@@ -7,9 +7,9 @@ Dog::Dog() : Animal()
 }
 Dog::Dog(Dog &copy) : Animal()
 {
+    std::cout << "Dog Copy Constuctor is being called" << std::endl;
     if (this != &copy)
         this->type = copy.type;
-    std::cout << "Dog Copy Constuctor is being called" << std::endl;
 }
 
 Dog &Dog::operator=(const Dog &copy)

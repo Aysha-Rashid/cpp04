@@ -2,7 +2,6 @@
 
 WrongCat::WrongCat() : WrongAnimal()
 {
-    this->type = "WrongCat";
     std::cout << "WrongCat Constructor is being called" << std::endl;
 }
 WrongCat::WrongCat(WrongCat &copy) : WrongAnimal()

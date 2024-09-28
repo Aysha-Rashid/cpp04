@@ -3,9 +3,9 @@
 Animal::Animal() : type("") { std::cout << "Animal Constructor is being called" << std::endl; }
 Animal::Animal(Animal &copy)
 {
+    std::cout << "Animal Copy Constuctor is being called" << std::endl;
     if (this != &copy)
         this->type = copy.type;
-    std::cout << "Animal Copy Constuctor is being called" << std::endl;
 }
 
 Animal &Animal::operator=(const Animal &copy)

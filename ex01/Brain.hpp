@@ -9,6 +9,9 @@ class Brain
         Brain();
         Brain(Brain &copy);
         Brain &operator=(const Brain &copy);
+        void setBrain(std::string &ideas, int index);
         ~Brain();
+
+    
 };
 #endif

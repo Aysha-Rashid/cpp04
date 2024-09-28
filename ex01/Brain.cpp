@@ -1,7 +1,11 @@
 #include "Brain.hpp"
 
-Brain::Brain() {std::cout << "Brain Constructor is called" << std::endl;}
-Brain::~Brain(){std::cout << "Brain Destructor is called" << std::endl;}
+Brain::Brain()
+{
+    for (int i = 0; i < 100; i++)
+        this->ideas[i] = "default ";
+    std::cout << "Brain Constructor is called" << std::endl;
+}
 Brain::Brain(Brain &copy)
 {
     for (int i = 0; i < 100; i++)
@@ -15,3 +19,9 @@ Brain &Brain::operator=(const Brain &copy)
         this->ideas[i] = copy.ideas[i];
     return (*this);
 }
+void Brain::setBrain(std::string &ideas, int index)
+{
+    this->ideas[index] = ideas;
+    std::cout << "ideas has been set to :" << this->ideas << std::endl;
+}
+Brain::~Brain(){std::cout << "Brain Destructor is called" << std::endl;}

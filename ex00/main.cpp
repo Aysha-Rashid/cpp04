@@ -11,7 +11,14 @@ int main()
     Animal* i = new Cat();
     WrongAnimal* w = new WrongCat();
     WrongCat *wrongcat = new WrongCat();
-    
+    // //-------------
+    // Dog dog1;
+    // Dog dog2(dog1);
+    // Dog dog3;
+    // dog3 = dog2;
+    // //-------------
+
+
     Animal k(*meta);
     k = *meta;
     std::cout << "j type: " << j->getType() << " " << std::endl;
@@ -23,12 +30,12 @@ int main()
     ((std::cout << "meta = "), (meta->makeSound()));
 
     // when the keyword virtual is not being used
-    std::cout << "\e[0;31mw = ";
-    w->makeSound();
-    std::cout << "\e[m";
+    std::cout << "\e[0;31m";
+    ((std::cout << "w = "), w->makeSound());
 
-    std::cout << "wrongcat = ";
+    // only works when declared using WrongCat type
     wrongcat->makeSound();
+    std::cout << "\e[m";
     (delete meta, delete j, delete i, delete w, delete wrongcat);
     return 0;
 }

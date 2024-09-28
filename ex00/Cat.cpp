@@ -7,9 +7,9 @@ Cat::Cat() : Animal()
 }
 Cat::Cat(Cat &copy) : Animal()
 {
+    std::cout << "Cat Copy Constuctor is being called" << std::endl;
     if (this != &copy)
         this->type = copy.type;
-    std::cout << "Cat Copy Constuctor is being called" << std::endl;
 }
 
 Cat &Cat::operator=(const Cat &copy)
