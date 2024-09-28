@@ -29,4 +29,5 @@ Cat &Cat::operator=(const Cat &copy)
 }
 void Cat::makeSound(void) const {std::cout << "Cat sound : meow!" << std::endl;}
 const std::string Cat::getType(void) const {return (this->type);}
+Brain *Cat::getBrain(void) {return (this->brain);}
 Cat::~Cat() {delete this->brain; std::cout << "Cat Destructor is being called" << std::endl;}

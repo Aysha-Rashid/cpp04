@@ -3,9 +3,11 @@
 Brain::Brain()
 {
     for (int i = 0; i < 100; i++)
-        this->ideas[i] = "default ";
+        // this->ideas[i] = "default ";
+        setBrain("default ", i);
     std::cout << "Brain Constructor is called" << std::endl;
 }
+
 Brain::Brain(Brain &copy)
 {
     for (int i = 0; i < 100; i++)

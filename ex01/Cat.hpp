@@ -12,9 +12,9 @@ class Cat : public Animal
         Cat &operator=(const Cat &copy);
         Cat(Cat &copy);
         ~Cat();
-
         const std::string getType() const;
-        void makeSound() const;
+         void makeSound() const;
+        Brain *getBrain();
 };
 
 #endif

@@ -7,23 +7,23 @@
 int main()
 {
 
-    int total = 10;
-    Animal *animals[total];
+    // int total = 5;
+    // Animal *animals[total];
 
-    int i = 0;
-    while (i < total)
-    {
-        if (total / 2 <= i)
-        {
-            animals[i] = new Dog();
-        }
-        else
-            animals[i] = new Cat();
-        i++;
-    }
-    i = 0;
-    while (i < total)
-        delete animals[i++];
+    // int i = 0;
+    // while (i < total)
+    // {
+    //     if (total / 2 <= i)
+    //     {
+    //         animals[i] = new Dog();
+    //     }
+    //     else
+    //         animals[i] = new Cat();
+    //     i++;
+    // }
+    // i = 0;
+    // while (i < total)
+    //     delete animals[i++];
     //-------------
     Dog dog1;
     Dog dog2(dog1);
