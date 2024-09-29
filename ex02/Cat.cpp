@@ -29,13 +29,18 @@ Cat &Cat::operator=(const Cat &copy)
 }
 void Cat::setBrain(std::string ideas, int index)
 {
-    this->brain->ideas[index] = ideas;
-    // std::cout << "ideas has been set to :" << this->brain->ideas[index] << std::endl;
+    if (index >= 0 && index < 100)
+        this->brain->ideas[index] = ideas;
+    else
+        std::cout << "invalid index" << std::endl;
 }
 
 void Cat::getBrain(int index)
 {
-    std::cout << "ideas of Cat" << index  << this->brain->ideas[index] << std::endl;
+    if (index >= 0 && index < 100)
+        std::cout << "ideas of Cat" << index << this->brain->ideas[index] << std::endl;
+    else
+        std::cout << "invalid index" << std::endl;
 }
 void Cat::makeSound(void) const {std::cout << "Cat sound : meow!" << std::endl;}
 const std::string Cat::getType(void) const {return (this->type);}

@@ -31,12 +31,18 @@ Dog &Dog::operator=(const Dog &copy)
 
 void Dog::setBrain(std::string ideas, int index)
 {
-    this->brain->ideas[index] = ideas;
+    if (index >= 0 && index < 100)
+        this->brain->ideas[index] = ideas;
+    else
+        std::cout << "invalid index" << std::endl;
 }
 
 void Dog::getBrain(int index)
 {
-    std::cout << "ideas of Dog" << index << this->brain->ideas[index] << std::endl;
+    if (index >= 0 && index < 100)
+        std::cout << "ideas of Dog" << index << this->brain->ideas[index] << std::endl;
+    else
+        std::cout << "invalid index" << std::endl;
 }
 Dog::~Dog() { delete this->brain; std::cout << "Dog Destructor is being called" << std::endl;}
 const std::string Dog::getType(void) const {return (this->type);}
