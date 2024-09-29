@@ -12,9 +12,11 @@ class Cat : public Animal
         Cat &operator=(const Cat &copy);
         Cat(Cat &copy);
         ~Cat();
+
         const std::string getType() const;
-         void makeSound() const;
-        Brain *getBrain();
+        void makeSound() const;
+        void setBrain(std::string ideas, int index);
+        void getBrain(int index);
 };
 
 #endif

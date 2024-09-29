@@ -27,7 +27,16 @@ Cat &Cat::operator=(const Cat &copy)
     }
     return (*this);
 }
+void Cat::setBrain(std::string ideas, int index)
+{
+    this->brain->ideas[index] = ideas;
+    // std::cout << "ideas has been set to :" << this->brain->ideas[index] << std::endl;
+}
+
+void Cat::getBrain(int index)
+{
+    std::cout << "ideas of Cat" << index  << this->brain->ideas[index] << std::endl;
+}
 void Cat::makeSound(void) const {std::cout << "Cat sound : meow!" << std::endl;}
 const std::string Cat::getType(void) const {return (this->type);}
-Brain *Cat::getBrain(void) {return (this->brain);}
 Cat::~Cat() {delete this->brain; std::cout << "Cat Destructor is being called" << std::endl;}

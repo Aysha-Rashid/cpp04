@@ -29,6 +29,15 @@ Dog &Dog::operator=(const Dog &copy)
     return (*this);
 }
 
+void Dog::setBrain(std::string ideas, int index)
+{
+    this->brain->ideas[index] = ideas;
+}
+
+void Dog::getBrain(int index)
+{
+    std::cout << "ideas of Dog" << index << this->brain->ideas[index] << std::endl;
+}
 Dog::~Dog() { delete this->brain; std::cout << "Dog Destructor is being called" << std::endl;}
 const std::string Dog::getType(void) const {return (this->type);}
 void Dog::makeSound(void) const {std::cout << "Dog sound : Rouf!" << std::endl;}
